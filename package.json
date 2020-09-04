@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass src/assets/scss/custom.scss src/assets/css/styles.css",
-    "watch:sass": "npm run sass -- --watch",
+    "sass": "sass --no-source-map src/assets/scss/custom.scss src/assets/css/styles.css",
+    "watch:sass": "npm run sass --no-source-map -- --watch",
     "watch:eleventy": "eleventy --serve",
-    "watch:minify": "postcss src/assets/css/styles.css -o src/assets/css/styles.min.css -w",
     "minify": "postcss _site/assets/css/styles.css > _site/assets/css/styles.min.css",
     "start": "npm-run-all sass --parallel watch:*",
     "build": "npm run sass && eleventy && npm run minify"
@@ -17,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "postcss-scss": "^2.1.1",
     "bootstrap": "^5.0.0-alpha1",
     "sass": "^1.26.10"
   },
