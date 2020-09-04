@@ -1,7 +1,7 @@
 node_modules
 .idea/
+.cache/
 _site/
 # Local Netlify folder
 .netlify
 .DS_store
-src/assets/css
