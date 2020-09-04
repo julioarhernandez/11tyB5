@@ -4,5 +4,4 @@ _site/
 # Local Netlify folder
 .netlify
 .DS_store
-
-_site/index.html
+src/assets/css

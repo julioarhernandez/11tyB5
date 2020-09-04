@@ -1,10 +1,9 @@
-const pluginSass = require("eleventy-plugin-sass");
-
 module.exports = function (eleventyConfig) {
     eleventyConfig
-        .addPassthroughCopy("./src/assets")
+        .addPassthroughCopy("./src/assets/images")
+        .addPassthroughCopy("./src/assets/css")
         .addPassthroughCopy("./src/admin");
-    
+
     return {
         passthroughFileCopy: true,
         markdownTemplateEngine: "njk",
